@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/samitkumarsinha/nodetest/issues"
   },
-  "homepage": "https://github.com/samitkumarsinha/nodetest#readme"
+  "homepage": "https://github.com/samitkumarsinha/nodetest#readme",
+  "dependencies": {
+    "mongodb": "^3.6.9"
+  }
 }
