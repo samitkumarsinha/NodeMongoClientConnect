@@ -6,10 +6,9 @@ function getData(res){
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         var dbo = db.db("sample_weatherdata");
-        dbo.collection("data").find({}).limit(2).toArray(function(err, result) {
+        dbo.collection("data").find({}).limit(2).pretty().toArray(function(err, result) {
         if (err) throw err;
-        // res.end(JSON.stringify(result));
-        res.json(result);
+        res.end(JSON.stringify(result));
         db.close();
         });
     });
