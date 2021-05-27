@@ -7,7 +7,7 @@ var url = "mongodb+srv://unicorn1:unicorn1@cluster0.idow2.mongodb.net/samnode";
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("sample_weatherdata");
-    dbo.collection("data").find({}).toArray(function(err, result) {
+    dbo.collection("data").find({}).limit(2).toArray(function(err, result) {
       if (err) throw err;
       console.log(result);
       db.close();
