@@ -9,12 +9,12 @@ MongoClient.connect(url, function(err, db) {
     var dbo = db.db("sample_weatherdata");
     dbo.collection("data").find({}).limit(2).toArray(function(err, result) {
       if (err) throw err;
-    //   console.log(result);
+      console.log(result);
       db.close();
     });
   });
 
-// http.createServer((req, res) => {
-//     res.writeHead(200, {'Content-Type' : 'text/plain'});
-//     res.end('hello world..');
-// }).listen(port);
+http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type' : 'text/plain'});
+    res.end('hello world..');
+}).listen(port);
