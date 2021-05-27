@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/samitkumarsinha/nodetest#readme",
   "dependencies": {
-    "mongodb": "^3.6.9"
+    "mongodb": "^3.6.9",
+    "mongoose": "4.4.6"
   }
 }
