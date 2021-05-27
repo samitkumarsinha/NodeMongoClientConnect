@@ -9,7 +9,7 @@ MongoClient.connect(url, function(err, db) {
     var dbo = db.db("sample_weatherdata");
     dbo.collection("data").find({}).limit(2).toArray(function(err, result) {
       if (err) throw err;
-      res.end('hello world..' + result);
+      res.end('hello world..' + JSON.stringify(result));
       result = result;
       db.close();
     });
