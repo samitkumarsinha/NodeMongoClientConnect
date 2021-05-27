@@ -8,7 +8,8 @@ function getData(res){
         var dbo = db.db("sample_weatherdata");
         dbo.collection("data").find({}).limit(2).toArray(function(err, result) {
         if (err) throw err;
-        res.end('hello world..' + JSON.stringify(result));
+        // res.end(JSON.stringify(result));
+        res.json(result);
         db.close();
         });
     });
